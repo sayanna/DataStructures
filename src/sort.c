@@ -4,6 +4,34 @@
 		  y= x-y; \
 		  x= x-y;
 
+/*
+@ func: find_min_index
+@ desc: utility function to find the index of minimum value in a buffer/array
+@ param: input => input buffer
+         len => length of the input buffer
+*/
+int find_min_index(int *input, int len)
+{
+	int min_index = 0;
+	int i;
+
+	for(i=0;i<len;i++)
+	{
+		if(input[i] < input[min_index])
+			min_index = i;
+	}
+
+	return min_index;
+}
+
+/*
+@ func: insert_sort
+@ desc: function to sort an input array using insert sorting algo
+        result is copied to an output array
+@ param: input => input un sorted array
+         output => sorted output
+         length => length of the input
+*/
 int insert_sort(int *input, int *output, int length)
 {
 	int temp,i,j;
@@ -37,20 +65,14 @@ int insert_sort(int *input, int *output, int length)
 }
 
 
-int find_min_index(int *input, int len)
-{
-	int min_index = 0;
-	int i;
-
-	for(i=0;i<len;i++)
-	{
-		if(input[i] < input[min_index])
-			min_index = i;
-	}
-
-	return min_index;
-}
-
+/*
+@ func: selection_sort
+@ desc: function to sort an input array using selection sorting algo
+        result is copied to an output array
+@ param: input  => input un sorted array
+         output => sorted output
+         len    => length of the input
+*/
 int selection_sort(int *input, int *output, int len)
 {
 	int i,min_index,j;
