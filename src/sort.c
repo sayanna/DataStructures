@@ -92,3 +92,34 @@ int selection_sort(int *input, int *output, int len)
 		output[i] = input[i];
 	}
 }
+
+/*
+@ func: bubble_sort
+@ desc: function to sort an input array using bubble sorting algo
+        result is copied to an output array
+@ param: input  => input un sorted array
+         output => sorted output
+         len    => length of the input
+*/
+int bubble_sort(int *input, int *output, int len)
+{
+	int i,j;
+
+	for(i=0;i<len;i++)
+	{
+		for(j=0;j<len-i-1;j++)
+		{
+			if(input[j] > input[j+1])
+			{
+				SWAP(input[j],input[j+1])
+			}
+		}
+	}
+	
+	/* Copy to output buffer */
+	for(i=0;i<len;i++)
+	{
+		output[i] = input[i];
+	}
+
+}

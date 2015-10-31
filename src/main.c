@@ -34,6 +34,11 @@ int main(int argc, char **argv)
 		ret_val = selection_sort(input,output,10);
 		break;
 
+	case 3:
+		printf("Example program - Bubble sort \n");
+		ret_val = bubble_sort(input,output,10);
+		break;
+
 	default:
 		printf("Invalid option \n");
 		return -1;
